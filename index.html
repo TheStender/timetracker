@@ -2,135 +2,14 @@
 <html>
 <head>
 <title>Time Tracker</title>
-<style>
-h1 {
-text-align:center;
-}
-
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-</style>
 </head>
 <body>
-<h1>Tony's Terrific Tracker of Time</h1>
-<br>
-<br>
-<br>
-<div class="container">
-<div class="row">
-<div class="col">
-<h3>Dropdown of Subjects goes over here - maybe with totals of percentage of time?</h3>
-<p>Example:</p>
-<p>Shows - 37%</p>
-<p>Programming - 50%</p>
-<p>Games - 13%</p>
-<p>When dropdown is clicked, everything in that subject becomes visible - with percentage bars if needed</p>
-<p>A Collapsible:</p>
-<button class="collapsible">Shows</button>
-<div class="content">
-<ul>
-<li>Dirk Gently</li>
-<li>The Punisher</li>
-<li>Brooklyn 99</li>
-</ul>
-</div>
-<button class="collapsible">Movies</button>
-<div class="content">
-<ul>
-<li>The Fountain</li>
-<li>Super Troopers 2</li>
-</ul>
-</div>
-<button class="collapsible">Programming</button>
-<div class="content">
-<ul>
-<li>Udemy Web Boot Camp</li>
-<li>Pluralsight MVC Course</li>
-<li>CS50x</li>
-<li>Activity Tracker</li>
-<li>Time Tracker</li>
-<li>Star Wars Game</li>
-</ul>
-</div>
-<button class="collapsible">Games</button>
-<div class="content">
-<ul>
-<li>Eurotruck Simulator</li>
-<li>Civ V</li>
-<li>American Truck Simulator</li>
-</ul>
-</div>
-</div>
-<div class="col">
-<h2>Breakdown shows/programming/games/etc?</h2>
-<img src="piechart.png" align:"right">
-</div>
-</div>
-</div>
+<h1>Your Tracker of Time</h1>
+<input type="text" id="activity" placeholder="Activity">
+<input type="text" id="totalTime" placeholder="Time to Complete">
+<button type="button" id="submitData">Submit</button>
 
-<h2>To Do List Area for day/week?</h2>
-<ul>
-<li>Time Tracker - Fill In Drop Downs</li>
-<li>Post Pay Job Aid - Update Heroku site</li>
-<li>Activity Tracker - Edit an existing item in database</li>
-</ul>
-
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
