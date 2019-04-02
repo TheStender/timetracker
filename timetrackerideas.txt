@@ -1,5 +1,0 @@
-website to track your activities
-can add new ones, set eta to finish, show percentages until complete
-
-
-how to make a chrome plugin
