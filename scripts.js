@@ -7,7 +7,7 @@ $(document).ready(function () {
 		var totaltime = $('#totalTime').val();
 		
 				if (confirm("Do you want to submit this activity?")) {
-					$.post("https://anthonystender-activitytracker.herokuapp.com/", {
+					$.post("https://anthonystender-activitytracker.herokuapp.com/api/tracker", {
 						data: { activitytype: activitytype, 
 								activityname: activityname,
 								currenttime: currenttime,
