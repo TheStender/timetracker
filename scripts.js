@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$("#submitData").click(function () {
-		var activitytype = $('#activityType').val();
+		var activityType = $('#activityType :selected').text();
 		var activityname = $('#activityName').val();
 		var currenttime = $('#currentTime').val();
 		var totaltime = $('#totalTime').val();
@@ -17,5 +17,13 @@ $(document).ready(function () {
 							})
 				}
 			});
-
+			
+/*
+	$.get( "https://anthonystender-activitytracker.herokuapp.com/api/tracker", function( data ) {
+	  $( ".result" ).html( data );
+	  alert( "Load was performed." );
+	}); */
+	
+	
 });
+
