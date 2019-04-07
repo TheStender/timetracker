@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$("#submitData").click(function () {
-		var activityType = $('#activityType :selected').text();
+		var activitytype = $('#activityType :selected').text();
 		var activityname = $('#activityName').val();
 		var currenttime = $('#currentTime').val();
 		var totaltime = $('#totalTime').val();
