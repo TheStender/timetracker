@@ -5,11 +5,28 @@
 </head>
 <body>
 <h1>Your Tracker of Time</h1>
+<select name="activityType" id="activityType">
+	<option>Activity Type</option>
+	<option value="movies">Movies</option>
+	<option value="shows">Shows</option>
+	<option value="studying">Studying</option>
+	<option value="games">Games</option>
+	<option value="reading">Reading</option>
+</select>
 <input type="text" id="activityType" placeholder="Activity Type">
 <input type="text" id="activityName" placeholder="Activity Name">
 <input type="text" id="currentTime" placeholder="Current Time">
 <input type="text" id="totalTime" placeholder="Time to Complete">
 <button type="button" id="submitData">Submit</button>
+
+<table id="dataTable">
+  <tr>
+	<th>Type</th>
+	<th>Name</th>
+	<th>Current Time</th>
+	<th>Total Time</th>
+  </tr>
+</table>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="scripts.js"></script>
