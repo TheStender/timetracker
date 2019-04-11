@@ -17,7 +17,21 @@ $(document).ready(function () {
 							})
 				}
 			});
-			
+	// test function below		
+	
+	$("#testProgress").click(function() {
+			var firstNumber = $('#currentPlaceholder').val();
+			var secondNumber = $('#totalPlaceholder').val();
+			var progressPercentage =  firstNumber / secondNumber * 100;
+            var progressbar = $( "#progressbar" );
+            $( "#progressbar" ).progressbar({
+               value: progressPercentage,
+               max:100
+            }); 
+            
+         });
+	
+	// test function above
 /*
 	$.get( "https://anthonystender-activitytracker.herokuapp.com/api/tracker", function( data ) {
 	  $( ".result" ).html( data );
