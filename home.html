@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Tracker</title>
+  <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+<body onload="importTimes()">
+  <h1 class="text-center">Project Time Tracker</h1>
+  <br>
+  <br>
+
+
+  <div class="row">
+  <div class="col">
+  <table id="leftTable">
+    <tr>
+	  <th>Course/Book</th>
+	  <th>Update Current Time</th>
+	  <th>Current Time</th>
+	  <th>Total Time</th>
+	  <th>% Complete</th>
+	  <th></th>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pluralsight C#</td>
+	  <td><input type="text" size="3" id="getPluralsightCTime"></td>
+	  <td><span id="psCTime"></span></td>
+	  <td><span id="pscTotalTime"></span></td>
+	  <td><span id="psCPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePluralsightC()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pluralsight ASP.NET</td>
+	  <td><input type="text" size="3" id="getPluralsightASPTime"></td>
+	  <td><span id="psASPTime"></span></td>
+	  <td><span id="psASPTotalTime"></span></td>
+	  <td><span id="psASPPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePluralsightASP()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pluralsight MVC</td>
+	  <td><input type="text" size="3" id="getPluralsightMVCTime"></td>
+	  <td><span id="psMVCTime"></span></td>
+	  <td><span id="psMVCTotalTime"></span></td>
+	  <td><span id="psMVCPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePluralsightMVC()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pluralsight JavsScript</td>
+	  <td><input type="text" size="3" id="getPluralsightJSTime"></td>
+	  <td><span id="psJSTime"></span></td>
+	  <td><span id="psJSTotalTime"></span></td>
+	  <td><span id="psJSPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePluralsightJS()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pluralsight Node.js</td>
+	  <td><input type="text" size="3" id="getPluralsightNodeTime"></td>
+	  <td><span id="psNodeTime"></span></td>
+	  <td><span id="psNodeTotalTime"></span></td>
+	  <td><span id="psNodePercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePluralsightNode()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pluralsight MySQL</td>
+	  <td><input type="text" size="3" id="getPluralsightSQLTime"></td>
+	  <td><span id="psSQLTime"></span></td>
+	  <td><span id="psSQLTotalTime"></span></td>
+	  <td><span id="psSQLPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePluralsightSQL()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Udemy Web Boot Camp</td>
+	  <td><input type="text" size="3" id="getUdemyTime"></td>
+	  <td><span id="udemyTime"></span></td>
+	  <td><span id="udemyTotalTime"></span></td>
+	  <td><span id="udemyPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateUdemy()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">CS50x</td>
+	  <td><input type="text" size="3" id="getCS50Time"></td>
+	  <td><span id="CS50Time"></span></td>
+	  <td><span id="CS50TotalTime"></span></td>
+	  <td><span id="CS50Percentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateCS50()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">C# Boot Camp</td>
+	  <td><input type="text" size="3" id="getCBootTime"></td>
+	  <td><span id="CBootTime"></span></td>
+	  <td><span id="CBootTotalTime"></span></td>
+	  <td><span id="CBootPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateCBoot()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">C# for Dummies</td>
+	  <td><input type="text" size="3" id="getCDummiesTime"></td>
+	  <td><span id="CDummiesTime"></span></td>
+	  <td><span id="CDummiesTotalTime"></span></td>
+	  <td><span id="CDummiesPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateCDummies()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">C# Players Guide</td>
+	  <td><input type="text" size="3" id="getCPlayersTime"></td>
+	  <td><span id="CPlayersTime"></span></td>
+	  <td><span id="CPlayersTotalTime"></span></td>
+	  <td><span id="CPlayersPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateCPlayers()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Pro MVC Book</td>
+	  <td><input type="text" size="3" id="getMVCTime"></td>
+	  <td><span id="MVCTime"></span></td>
+	  <td><span id="MVCTotalTime"></span></td>
+	  <td><span id="MVCPercentage"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateProMVC()">Update</button></td>
+	</tr>
+  </table>
+  </div>
+  <div class="col">
+  <table>
+    <tr>
+	  <th>Project</th>
+	  <th>Worked Time</th>
+	  <th>Total Time</th>
+	  <th></th>
+	</tr>
+	<tr>
+	  <td class="firstTd">Activity Tracker</td>
+	  <td><input type="text" size="3" id="activityTime"></td>
+	  <td><span id="activityTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateTracker()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Post Pay Job Aid</td>
+	  <td><input type="text" size="3" id="jobAidTime"></td>
+	  <td><span id="jobAidTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePostPay()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Post Pay MVC Job Aid</td>
+	  <td><input type="text" size="3" id="MVCJobAidTime"></td>
+	  <td><span id="MVCJobAidTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updatePostPayMVC()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Software Guild Warmup Exercises</td>
+	  <td><input type="text" size="3" id="SGWarmupTime"></td>
+	  <td><span id="SGWarmupTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateSGWarmup()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Software Guild LINQ Exercises</td>
+	  <td><input type="text" size="3" id="SGLinqTime"></td>
+	  <td><span id="SGLinqTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateSGLinq()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">Coderbyte</td>
+	  <td><input type="text" size="3" id="CoderbyteTime"></td>
+	  <td><span id="CoderbyteTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateCoderbyte()">Update</button></td>
+	</tr>
+	<tr>
+	  <td class="firstTd">CodinGame</td>
+	  <td><input type="text" size="3" id="codinGameTime"></td>
+	  <td><span id="codinGameTotal"></span></td>
+	  <td><button type="button" class="btn btn-sm btn-primary" onclick="updateCodinGame()">Update</button></td>
+	</tr>
+  </table>
+  </div>
+  </div>
+  <br>
+  <br>
+  
+  <script src="timescripts.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</body>
+</html>

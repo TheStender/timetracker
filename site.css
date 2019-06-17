@@ -1,0 +1,22 @@
+th {
+	text-decoration: underline;
+}
+
+.firstTd {
+	text-align: left;
+}
+
+td {
+	text-align: center;
+}
+
+#leftTable {
+	margin-left: 30px;
+}
+
+#updateInfo {
+	margin-left: 30px;
+}
+
+
+
