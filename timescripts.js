@@ -8,9 +8,9 @@ var psSQLTotal = 17;
 var udemyTotal = 47;
 var CS50Total = 80;
 var CBootTotal = 100;
-var CDummiesTotal = 40;
-var CPlayersTotal = 40;
-var MVCTotal = 40;
+var CDummiesTotal = 800;
+var CPlayersTotal = 353;
+var MVCTotal = 1011;
 
 // total project times here
 
