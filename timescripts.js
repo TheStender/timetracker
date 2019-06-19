@@ -20,8 +20,31 @@ var MVCTotal = 1011;
 function importTimes() {
 	importTotalTimes();
 	getPercentage();
+	var pluralsightCCurrent = localStorage.getItem("pluralsightCCurrent");
+	var pluralsightASPCurrent = localStorage.getItem("pluralsightASPCurrent");
+	var pluralsightMVCCurrent = localStorage.getItem("pluralsightMVCCurrent");
+	var pluralsightJSCurrent = localStorage.getItem("pluralsightJSCurrent");
+	var pluralsightNodeCurrent = localStorage.getItem("pluralsightNodeCurrent");
+	var pluralsightSQLCurrent = localStorage.getItem("pluralsightSQLCurrent");
 	var udemyCurrent = localStorage.getItem("udemyCurrent");
+	var CS50Current = localStorage.getItem("CS50Current");
+	var CBootCurrent = localStorage.getItem("CBootCurrent");
+	var CDummiesCurrent = localStorage.getItem("CDummiesCurrent");
+	var CPlayersCurrent = localStorage.getItem("CPlayersCurrent");
+	var MVCCurrent = localStorage.getItem("MVCCurrent");
+	
+	document.getElementById("psCTime").innerHTML = pluralsightCCurrent;
+	document.getElementById("psASPTime").innerHTML = pluralsightASPCurrent;
+	document.getElementById("psMVCTime").innerHTML = pluralsightMVCCurrent;
+	document.getElementById("psJSTime").innerHTML = pluralsightJSCurrent;
+	document.getElementById("psNodeTime").innerHTML = pluralsightNodeCurrent;
+	document.getElementById("psSQLTime").innerHTML = pluralsightSQLCurrent;
 	document.getElementById("udemyTime").innerHTML = udemyCurrent;
+	document.getElementById("CS50Time").innerHTML = CS50Current;
+	document.getElementById("CBootTime").innerHTML = CBootCurrent;
+	document.getElementById("CDummiesTime").innerHTML = CDummiesCurrent;
+	document.getElementById("CPlayersTime").innerHTML = CPlayersCurrent;
+	document.getElementById("MVCTime").innerHTML = MVCCurrent;
 }
 
 // for Importing, total times
