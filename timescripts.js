@@ -188,7 +188,7 @@ function updateUdemy() {
 function updateCS50() {
 	var newTime = document.getElementById("getCS50Time").value;
 	localStorage.setItem("CS50Current", newTime);
-	document.getElementById("cs50Time").innerHTML = localStorage.getItem("CS50Current");
+	document.getElementById("CS50Time").innerHTML = localStorage.getItem("CS50Current");
 	getPercentage();
 }
 
